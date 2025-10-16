@@ -3,7 +3,7 @@ public class TimeConverter {
         long totalSeconds = millis / 1000;
         int seconds = (int) (totalSeconds % 60);
         int minutes = (int) ((totalSeconds / 60) % 60);
-        int hours   = (int) ((totalSeconds / 3600) % 24);
+        int hours   = (int) (((totalSeconds / 3600)+ 7) % 24);
         return hours + ":" + minutes + ":" + seconds;
     }
 
